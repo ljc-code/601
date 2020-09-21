@@ -1,0 +1,50 @@
+<!--pages/receive/index.wxml-->
+<view class="all">
+  <scroll-view scroll-y style="height:{{scrollHig}}px">
+    <!-- <view class="cont" wx:for="{{receiveList}}" wx:key="{{index}}" data-index="{{index}}" bindtap="skipDetails"> -->
+    <view class="cont" wx:for="{{receiveList}}" wx:key="index" data-index="{{index}}" bindtap="skipDetails">
+      <view class="contTop">
+        <view class="order" style="margin-bottom:20rpx">
+          <text class="topText1">领用单</text>
+          <text class="topText2">{{item.OperateSN}}</text>
+        </view>
+        <view class="order">
+          <text class="topText1">制单人</text>
+          <text class="topText2">{{item.CreateUser}}</text>
+        </view>
+      </view>
+      <view class="contMiddle">
+        <view class="middleLeft">
+          <view class="nameKey">领用人</view>
+          <view class="nameValue">{{item.Staff}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="middleRig">
+          <view class="numberKey">数量</view>
+          <view class="numberValue">{{item.Items}}</view>
+        </view>
+      </view>
+      <view class="contBot">
+        <view class="botLeft">
+          <view class="leftKey">领用日期</view>
+          <view class="leftValue" style="margin-bottom:30rpx">{{item.ProcessTime}}</view>
+          <view class="leftKey">领用后区域</view>
+          <view class="leftValue">{{item.Depart}}</view>
+        </view>
+        <view class="botRig">
+          <view class="rigKey">领用后使用公司</view>
+          <view class="rigValue" style="margin-bottom:30rpx">{{item.Business}}</view>
+          <view class="rigKey">领用后存放地点</view>
+          <view class="rigValue">{{item.Seat}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="addReceive">
+    <text class="addLeft">新建领用</text>
+    <view class="addRig" bindtap="clickScan">
+      <image class="scanIcon" src="../image/index/indexIcon3.png"></image>
+    </view>
+  </view>
+</view>

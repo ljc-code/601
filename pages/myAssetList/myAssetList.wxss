@@ -1,0 +1,179 @@
+/* pages/myAssetList/index.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+.topSearch{
+  width: 100%;
+  height: 100rpx;
+  background-color: #ffffff;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchInput{
+  width: 400rpx;
+  height: 60rpx;
+  border: 1px solid #00BFFF;
+  border-right: 0;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx 0 0 10rpx;
+  font-size: 25rpx;
+}
+.searchBtn{
+  background-color: #00BFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10rpx 10rpx 0;
+  width: 150rpx;
+  height: 60rpx;
+}
+.searchIcon{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.searchWord{
+  color: #ffffff;
+  font-size: 25rpx;
+  font-family: PingFang;
+  font-weight: bold;
+}
+
+.contList{
+  width: 690rpx;
+  margin: 0 auto;
+  /* height: 400rpx; */
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  box-shadow: 10rpx 20rpx 20rpx 0rpx rgb(233, 230, 230);
+  padding: 20rpx 20px 110rpx 40rpx;
+  box-sizing: border-box;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+.deviceState{
+  background-color: #EE6363;
+  padding: 10rpx 30rpx;
+  font-size: 25rpx;
+  border-radius: 30rpx;
+  color: #ffffff;
+}
+.scroll{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  position:relative
+}
+.name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.deviceName{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.assetCode,.asset{
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.assetCode{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 20rpx;
+}
+.asset{
+  width: 100%;
+  padding: 10rpx 0;
+}
+.leftKey{
+  margin-right: 55rpx;
+  font-size: 25rpx;
+  color: #999999;
+}
+.rightCont{
+  font-size: 25rpx;
+  color: #333333;
+  width: 200rpx;
+  /* overflow:hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  display:box;
+  box-orient:vertical;
+  line-clamp:2; */
+  word-break: break-all;
+}
+.assetBot{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80rpx;
+  border-top: 1px solid #dddddd;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.assetBot text{
+  width: 233rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #00BFFF;
+}
+.text2{
+  border-right: 1rpx solid #dddddd;
+  border-left: 1rpx solid #dddddd;
+}
+
+.deviceParams{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.deviceImg{
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 20rpx;
+}
+
+.chooseTap{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20rpx;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+.line{
+  position: absolute;
+  left: 55rpx;
+  bottom: 15rpx;
+  width: 77rpx;
+  height: 5rpx;
+  background-color: #00BFFF;
+  transition: left 0.3s;
+}
+.noData{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 40rpx;
+  color: #999999;
+}

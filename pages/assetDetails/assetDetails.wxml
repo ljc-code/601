@@ -1,0 +1,55 @@
+<!--pages/assetDetails/index.wxml-->
+<view class="all">
+  <view class="deviceMess">
+    <view class='name'>
+      <text class="state">闲置</text>
+      <text class="deviceName">设备名称</text>
+    </view>
+    <view class="assetCode">
+      <text class="leftKey">资产编码</text>
+      <text class="rigValue">111111111111</text>
+    </view>
+    <view class="topCont">
+      <view>
+        <view class="contLeft">
+          <text class="contLeftKey">资产分类</text>
+          <text class="contRigValue">111111111111</text>
+        </view>
+        <view class="contLeft">
+          <text class="contLeftKey">单位</text>
+          <text class="contRigValue">111111111111</text>
+        </view>
+        <view class="contLeft">
+          <text class="contLeftKey">规格型号</text>
+          <text class="contRigValue">111111111111</text>
+        </view>
+        <view class="contLeft">
+          <text class="contLeftKey">供应商</text>
+          <text class="contRigValue">111111111111</text>
+        </view>
+        <view class="contLeft">
+          <text class="contLeftKey">资产分类</text>
+          <text class="contRigValue">111111111111</text>
+        </view>
+        <view class="contLeft">
+          <text class="contLeftKey">购入日期</text>
+          <text class="contRigValue">111111111111</text>
+        </view>
+      </view>
+      <view class="rigPic">
+        <image class="deviceImg" src="../image/myAsset/2.jpg"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="basicMess" style="height:{{messHig}}px">
+    <view class="basicTitle">
+      <view class="line"></view>
+      <view class="titleWord">基本信息</view>
+    </view>
+    <view class="basicCont" style="border-bottom:{{index==6?'0':'1rpx solid #dddddd'}}" wx:for="{{basicArr}}" wx:key="index">
+      <text class="basicLeft">{{item.basicKey}}</text>
+      <text class="basicrig">{{item.basicValue}}</text>
+    </view>
+  </view>
+</view>

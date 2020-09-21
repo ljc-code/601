@@ -1,0 +1,35 @@
+<!--pages/addAssetList/addAssetList.wxml-->
+<view class="all">
+  <view class="topSearch">
+    <input class="searchInput" bindblur="getValue"></input>
+    <view class="searchBtn" catchtap="searchData">
+      <image class="searchIcon" src="../image/myAsset/searchIcon.png"></image>
+      <text class="searchWord">搜索</text>
+    </view>
+  </view>
+
+  <scroll-view class="scroll" scroll-y style="height:{{scrollHig}}px">
+    <view class="assetCont" wx:for="{{dataList}}" wx:key="index" data-index="{{index}}" bindtap="checkFn">
+      <view class="checkState" style="background-color:{{item.check?'	#3CB371':''}}"></view>
+      <view class="deviceMess">
+        <view class="deviceTop">
+          <image class="header" src="{{item.Headimg}}"></image>
+          <view class="deviceName">
+            <text class="name">{{item.AssetName}}</text>
+            <text class="model">规格型号：{{item.AssetModel}}</text>
+          </view>
+          <view class="status" style="background-color:{{item.StatusName=='闲置'?'	#32CD32':item.StatusName=='借用'?'#EEC900':item.StatusName=='维修'?'#EE6363':item.StatusName=='处置'?'#EE7942':'	#40E0D0'}}">{{item.StatusName}}</view>
+        </view>
+        <view class="ddeviceBot">
+          <view class="depart">部门人员：{{item.Staff}}</view>
+          <view class="place">存放地点：{{item.Seat}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="addReceive">
+    <text class="addLeft" bindtap="checkAllFn">{{checkAll}}</text>
+    <view class="addRig"  bindtap="affirmCheck">确认</view>
+  </view>
+</view>

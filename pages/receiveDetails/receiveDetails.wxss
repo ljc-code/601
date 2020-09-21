@@ -1,0 +1,121 @@
+/* pages/createReceive/index.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+.contAll{
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  font-size: 25rpx;
+  color: #666666;
+  border-top: 1rpx solid #dddddd;
+  border-bottom: 1rpx solid #dddddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.save{
+  background-color: #8470FF;
+  padding: 0 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #ffffff;
+  border-radius: 30rpx;
+}
+.receiveCont{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #dddddd;
+  box-sizing: border-box;
+}
+.contLeft{
+  font-size: 30rpx;
+  color: #333333;
+}
+.contRig{
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.addAssetList{
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.listCont{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid #dddddd;
+}
+.headView{
+  width: 150rpx;
+  height: 150rpx;
+  overflow: hidden;
+  border-radius: 20rpx;
+}
+.header{
+  width: 150rpx;
+  height: 150rpx;
+}
+.assetMess{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+.assetName,.assetType{
+  width: 390rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.assetName{
+  margin-bottom: 30rpx;
+}
+.status{
+  margin-top: 20rpx;
+  padding: 5rpx 20rpx;
+  border-radius: 30rpx;
+  font-size: 25rpx;
+  color: #ffffff;
+  background-color: red;
+}
+
+.addReceive{
+  width: 100%;
+  height: 100rpx;
+  background-color: #8470FF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addLeft,.addRig{
+  font-size: 30rpx;
+  color: #ffffff;
+  width: 50%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-right: 2rpx solid #ffffff;
+  box-sizing: border-box;
+}

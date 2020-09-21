@@ -1,0 +1,106 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.12.2",
+	"appid": "wxfe63200dbb90d102",
+	"projectname": "601_%E6%AC%A3%E7%A0%81%E5%9B%BA%E5%AE%9A%E8%B5%84%E4%BA%A7",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 0,
+					"name": "我的资产",
+					"pathName": "pages/myAssetList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 0,
+					"name": "资产详情",
+					"pathName": "pages/assetDetails/assetDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 0,
+					"name": "自助领用",
+					"pathName": "pages/receive/receive",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 0,
+					"name": "新建领用",
+					"pathName": "pages/createReceive/createReceive",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 0,
+					"name": "领用详情",
+					"pathName": "pages/receiveDetails/receiveDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 0,
+					"name": "添加资产列表",
+					"pathName": "pages/addAssetList/addAssetList",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

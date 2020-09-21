@@ -1,0 +1,58 @@
+<!--pages/myAssetList/index.wxml-->
+<view class="all">
+  <view class="topSearch">
+    <input class="searchInput" bindblur="getValue"></input>
+    <view class="searchBtn" catchtap="searchData">
+      <image class="searchIcon" src="../image/myAsset/searchIcon.png"></image>
+      <text class="searchWord">搜索</text>
+    </view>
+  </view>
+
+  <view class="chooseTap">
+    <text wx:for="{{chooseTap}}" wx:key="index" data-index="{{index}}" bindtap="chooseTapFn" style="color:{{tapIndex==index?'#00BFFF':'#333333'}}">{{item}}</text>
+    <view class="line" style="left:{{tapIndex*188+55}}rpx"></view>
+  </view>
+
+  <scroll-view class="scroll" scroll-y style="height:{{scrollHig}}px" bindscrolltolower="bindscrolltolower">
+    <view class="contList" wx:for="{{showListArr}}" wx:key="index">
+      <view class="name">
+        <text class="deviceName">{{item.AssetName}}</text>
+        <text class="deviceState" style="background-color:{{item.StatusName=='在用'?'	#40E0D0':item.StatusName=='借用'?'#EEC900':'#EE6363'}}">{{item.StatusName}}</text>
+      </view>
+      <view class="assetCode">
+        <text class="leftKey">资产编码</text>
+        <text class="rightCont">{{item.AssetNo}}</text>
+      </view>
+      <view class="deviceParams">
+        <view class="deviceLeft">
+          <view class="asset">
+            <text class="leftKey">规格型号</text>
+            <text class="rightCont">{{item.AssetModel}}</text>
+          </view>
+          <view class="asset">
+            <text class="leftKey">资产分类</text>
+            <text class="rightCont">{{item.Category}}</text>
+          </view>
+          <view class="asset">
+            <text class="leftKey">部门人员</text>
+            <text class="rightCont">{{item.Depart}}-{{item.Staff}}</text>
+          </view>
+          <view class="asset">
+            <text class="leftKey">存放地点</text>
+            <text class="rightCont">{{item.Seat}}</text>
+          </view>
+        </view>
+        <view class="rigPic">
+          <image class="deviceImg" src="{{item.Headimg}}"></image>
+        </view>
+      </view>
+      
+      <view class="assetBot">
+        <text data-index="{{index}}" bindtap="skipDetails">资产详情</text>
+        <text class="text2">资产管理</text>
+        <text>处理记录</text>
+      </view>
+    </view>
+    <view class="noData" wx:if="{{showListArr.length==0}}">暂未搜索到相应的数据</view>
+  </scroll-view>
+</view>

@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/myAssetList/myAssetList",
+    "pages/assetDetails/assetDetails",
+    "pages/receive/receive",
+    "pages/createReceive/createReceive",
+    "pages/receiveDetails/receiveDetails",
+    "pages/addAssetList/addAssetList"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

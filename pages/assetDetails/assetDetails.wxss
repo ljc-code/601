@@ -1,0 +1,108 @@
+/* pages/assetDetails/index.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+}
+.deviceMess{
+  width: 100%;
+  height: 490rpx;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 40rpx;
+}
+.name,.assetCode,.contLeft{
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.assetCode{
+  border-bottom: 1rpx solid #dddddd;
+  padding: 10rpx 0 30rpx 0;
+}
+.contLeft{
+  padding: 10rpx 0;
+}
+.topCont{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.leftKey,.contLeftKey{
+  font-size: 25rpx;
+  color: #999999;
+  margin-right: 40rpx;
+  width: 120rpx;
+  text-align-last: justify;
+  /* text-align: right; */
+}
+.rigValue,.contRigValue{
+  font-size: 25rpx;
+  color: #333333;
+  width: 250rpx;
+  word-break: break-all;
+}
+.state{
+  width: 120rpx;
+  font-size: 25rpx;
+  color: #ffffff;
+  padding: 6rpx 0;
+  text-align: center;
+  background-color: red;
+  margin-right: 40rpx;
+  border-radius: 30rpx;
+}
+.deviceName{
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: bold;
+}
+
+.deviceImg{
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 20rpx;
+}
+
+.basicMess{
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  border-radius: 40rpx 40rpx 0 0;
+  margin-top: 20rpx;
+}
+
+.basicCont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #dddddd;
+  padding: 30rpx 0;
+  font-size: 25rpx;
+  color: #333333;
+}
+.basicLeft{
+  width: 120rpx;
+  text-align-last: justify;
+}
+.basicTitle{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.line{
+  width: 4rpx;
+  height: 30rpx;
+  background-color: #1E90FF;
+}
+.titleWord{
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  color: 	#1E90FF;
+  margin-left: 10rpx;
+}

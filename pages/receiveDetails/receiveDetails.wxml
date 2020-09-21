@@ -1,0 +1,46 @@
+<!--pages/createReceive/index.wxml-->
+<view class="all">
+  <view class="title">
+    <text>基本信息</text>
+    <text class="save" bindtap="saveFn">保存</text>
+  </view>
+  <view class="contAll">
+    <view class="receiveCont">
+      <text class="contLeft">领用时间</text>
+      <text class="contRig">{{detailsArr.ProcessTime}}</text>
+    </view>
+    <view class="receiveCont">
+      <text class="contLeft">领用部门与人员</text>
+      <text class="contRig">{{detailsArr.Depart}}-{{detailsArr.Staff}}</text>
+    </view>
+    <view class="receiveCont">
+      <text class="contLeft">领用存放地</text>
+      <text class="contRig">{{detailsArr.Seat}}</text>
+    </view>
+    <view class="receiveCont" style="border-bottom:0">
+      <text class="contLeft">领用原因</text>
+      <text class="contRig">{{detailsArr.Remark}}</text>
+    </view>
+  </view>
+  
+  <view class="title">领用资产列表</view>
+  <scroll-view scroll-y style="height:{{scrollHig}}px">
+    <view class="addAssetList" wx:for="{{addAssetArr}}" wx:key="index">
+      <view class="listCont">
+        <view class="headView">
+          <image class="header" src="{{item.Headimg}}"></image>
+        </view>
+        <view class="assetMess">
+          <text class="assetName">{{item.AssetName}}</text>
+          <text class="assetType">{{item.AssetModel}}</text>
+        </view>
+        <view class="status" style="background-color:{{item.StatusName=='闲置'?'	#32CD32':item.StatusName=='借用'?'#EEC900':item.StatusName=='维修'?'#EE6363':item.StatusName=='处置'?'#EE7942':'	#40E0D0'}}">{{item.StatusName}}</view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="addReceive">
+    <view class="addRig" bindtap="clickScan">扫描添加</view>
+    <text class="addLeft" bindtap="skipAddAssset">搜索添加</text>
+  </view>
+</view>

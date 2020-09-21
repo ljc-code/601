@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="all">
+  <image class="topBg" src="../image/index/topBg.png"></image>
+  <view class="allCont">
+    <view class="pageTop">
+      <view class="peopleName" wx:if="{{register==1}}">HI,{{companyArrAll[pickerIndex].Staff}}</view>
+      <view class="peopleName" wx:if="{{register!=1}}"></view>
+      <view class="topIcon">
+          <!-- <image class="indexIcon1" src="../image/index/indexIcon1.png" bindtap="clickCenter"></image>
+          <view class="message" bindtap="clickMessage">
+            <view class="redNum">2</view>
+            <image class="indexIcon2" src="../image/index/indexIcon2.png"></image>
+          </view> -->
+          <view class="quitBtn" bindtap="quitFn" wx:if="{{register!=0}}">登出</view>
+          <image class="indexIcon3" src="../image/index/indexIcon3.png" bindtap="clickScan"></image>
+      </view>
+    </view>
+
+    <view class="company">
+      <button class="noRegister" wx:if="{{register==0}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <text class="pleaseRegister">您还未登录</text>
+        <text class="clickword">点击登录/可享受服务</text>
+      </button>
+      <view class="yesRegister" wx:if="{{register==1}}">
+        <view class="companyName">
+          <!-- <text>上海游秦信息科技有限公司</text> -->
+          <picker bindchange="bindPickerChange" value="{{pickerIndex}}" range="{{companyArr}}">
+            <view class="picker">{{companyArr[pickerIndex]}}</view>
+          </picker>
+          <image class="arrows" src="../image/index/arrows.png"></image>
+        </view>
+        <view class="department">
+          <text style="margin-right:30rpx">{{companyArrAll[pickerIndex].Depart}}</text>
+        </view>
+      </view>
+      <view class="yesRegister" wx:if="{{register==2}}">
+        <view class="companyName">
+          <text>{{registerPhone}}</text>
+          <text class="quit" bindtap="quitFn">退出</text>
+        </view>
+        <view class="department">
+          <text>您没有应用权限</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="property" wx:if="{{register==1}}">
+      <view class="myProperty">我的资产</view>
+      <view class="classify">
+        <view class="classifyChild" wx:for="{{myPropertyArr}}" wx:key="index" data-index="{{index}}" bindtap="skipAsset">
+            <text class="number">{{item.Qty}}</text>
+            <text class="propertyStaty">{{item.StatusName}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="manage">
+      <view class="myManage">资产管理</view>
+      <view class="manageAll">
+        <view class="manageChild" wx:for="{{manage}}" wx:key="index" data-index="{{index}}" bindtap="clickManage">
+            <image class="manageIcon" src="{{item.Icon}}"></image>
+            <text class="propertyStaty">{{item.MenuName}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="consume">
+      <view class="myManage">耗材管理</view>
+      <view class="manageAll">
+        <view class="manageChild" wx:for="{{consumeManage}}" wx:key="index" data-index="{{index}}" bindtap="clickConsume">
+            <image class="manageIcon" src="{{item.Icon}}"></image>
+            <text class="propertyStaty">{{item.MenuName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
