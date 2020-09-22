@@ -3,20 +3,24 @@
   <scroll-view scroll-y style="height:{{scrollHig}}px">
     <!-- <view class="cont" wx:for="{{receiveList}}" wx:key="{{index}}" data-index="{{index}}" bindtap="skipDetails"> -->
     <view class="cont" wx:for="{{receiveList}}" wx:key="index" data-index="{{index}}" bindtap="skipDetails">
-      <view class="contTop">
-        <view class="order" style="margin-bottom:20rpx">
-          <text class="topText1">领用单</text>
-          <text class="topText2">{{item.OperateSN}}</text>
+      <view class="contTopAll">
+        <view class="contTop">
+          <view class="order" style="margin-bottom:20rpx">
+            <text class="topText1">领用单</text>
+            <text class="topText2">{{item.OperateSN}}</text>
+          </view>
+          <view class="order">
+            <text class="topText1">制单人</text>
+            <text class="topText2">{{item.CreateUser}}</text>
+          </view>
         </view>
-        <view class="order">
-          <text class="topText1">制单人</text>
-          <text class="topText2">{{item.CreateUser}}</text>
-        </view>
+        <view class="coderState" style="background-color:{{item.backColor}}">{{item.Status}}</view>
       </view>
+      
       <view class="contMiddle">
         <view class="middleLeft">
-          <view class="nameKey">领用人</view>
-          <view class="nameValue">{{item.Staff}}</view>
+          <view class="nameKey">领用日期</view>
+          <view class="nameValue">{{item.ProcessTime}}</view>
         </view>
         <view class="line"></view>
         <view class="middleRig">
@@ -26,16 +30,12 @@
       </view>
       <view class="contBot">
         <view class="botLeft">
-          <view class="leftKey">领用日期</view>
-          <view class="leftValue" style="margin-bottom:30rpx">{{item.ProcessTime}}</view>
-          <view class="leftKey">领用后区域</view>
-          <view class="leftValue">{{item.Depart}}</view>
+          <view class="leftKey">存放地点</view>
+          <view class="leftValue">{{item.Seat}}</view>
         </view>
         <view class="botRig">
-          <view class="rigKey">领用后使用公司</view>
-          <view class="rigValue" style="margin-bottom:30rpx">{{item.Business}}</view>
-          <view class="rigKey">领用后存放地点</view>
-          <view class="rigValue">{{item.Seat}}</view>
+          <view class="rigKey">用途</view>
+          <view class="rigValue">{{item.Remark}}</view>
         </view>
       </view>
     </view>

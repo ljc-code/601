@@ -43,6 +43,19 @@ Page({
           if(res.Takeover[i].ProcessTime){
             res.Takeover[i].ProcessTime = res.Takeover[i].ProcessTime.slice(0,10)
           }
+          if(res.Takeover[i].Status==0){
+            res.Takeover[i].Status = "新建"
+            res.Takeover[i].backColor = "#40E0D0"
+          }else if(res.Takeover[i].Status==1){
+            res.Takeover[i].Status = "驳回"
+            res.Takeover[i].backColor = "#EE6363"
+          }else if(res.Takeover[i].Status==2){
+            res.Takeover[i].Status = "待批"
+            res.Takeover[i].backColor = "#EEC900"
+          }else{
+            res.Takeover[i].Status = "完成"
+            res.Takeover[i].backColor = "#32CD32"
+          }
         }
         this.setData({
           receiveList:res.Takeover

@@ -34,7 +34,7 @@
           <text class="assetName">{{item.AssetName}}</text>
           <text class="assetType">{{item.AssetModel}}</text>
         </view>
-        <view class="status" style="background-color:{{item.StatusName=='闲置'?'	#32CD32':item.StatusName=='借用'?'#EEC900':item.StatusName=='维修'?'#EE6363':item.StatusName=='处置'?'#EE7942':'	#40E0D0'}}">{{item.StatusName}}</view>
+        <view class="status" style="background-color:{{item.StatusName=='闲置'?'#32CD32':item.StatusName=='借用'?'#EEC900':item.StatusName=='维修'?'#EE6363':item.StatusName=='处置'?'#EE7942':'	#40E0D0'}}">{{item.StatusName}}</view>
       </view>
     </view>
   </scroll-view>

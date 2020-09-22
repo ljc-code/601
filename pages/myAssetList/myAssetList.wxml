@@ -17,7 +17,7 @@
     <view class="contList" wx:for="{{showListArr}}" wx:key="index">
       <view class="name">
         <text class="deviceName">{{item.AssetName}}</text>
-        <text class="deviceState" style="background-color:{{item.StatusName=='在用'?'	#40E0D0':item.StatusName=='借用'?'#EEC900':'#EE6363'}}">{{item.StatusName}}</text>
+        <text class="deviceState" style="background-color:{{item.StatusName=='在用'?'#40E0D0':item.StatusName=='借用'?'#EEC900':'#EE6363'}}">{{item.StatusName}}</text>
       </view>
       <view class="assetCode">
         <text class="leftKey">资产编码</text>

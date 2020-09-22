@@ -9,7 +9,23 @@ page{
   background-color: #ffffff;
   margin-top: 20rpx;
 }
-.contTop,.contMiddle{
+.contTopAll{
+  width: 100%;
+  padding: 30rpx 50rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #dddddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.coderState{
+  font-size: 30rpx;
+  color: #ffffff;
+  border-radius: 30rpx;
+  padding: 10rpx 30rpx;
+  background-color: red;
+}
+.contMiddle{
   width: 100%;
   padding: 30rpx 50rpx;
   box-sizing: border-box;
@@ -28,6 +44,11 @@ page{
 .topText2{
   font-size: 30rpx;
   color: #999999;
+  width: 350rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
 }
 
 .contMiddle{
@@ -39,10 +60,6 @@ page{
   font-size: 25rpx;
   color: #999999;
   margin-bottom: 30rpx;
-}
-.nameValue,.numberValue,.leftValue,.rigValue{
-  font-size: 35rpx;
-  color: #333333;
 }
 .middleLeft,.middleRig{
   width: 375.5rpx;
@@ -68,12 +85,14 @@ page{
 .botLeft,.botRig{
   width: 50%;
 }
-.leftValue,.rigValue{
-  width: 100%;
+.nameValue,.numberValue,.leftValue,.rigValue{
+  width: 95%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-break: break-all;
+  font-size: 35rpx;
+  color: #333333;
 }
 .scanIcon{
   width: 40rpx;
